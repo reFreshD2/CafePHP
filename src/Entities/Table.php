@@ -6,6 +6,7 @@ namespace Entities;
 
 class Table extends Entity {
     private $capacity;
+    private $status;
     private $count = 0;
 
     public function add(array $params) : bool {
@@ -13,6 +14,7 @@ class Table extends Entity {
         $count = $this->count;
         foreach ($params as $value) {
             $this->capacity[$this->count] = $value;
+            $this->status[$this->count] = "free";
             $this->count++;
         }
         unset($value);
@@ -24,8 +26,12 @@ class Table extends Entity {
 
     public function show() : void {
         for ($i = 0; $i < $this->count; $i++) {
-            echo PHP_EOL . 'Table '. $i . ' have capacity ' . $this->capacity[$i];
+            echo PHP_EOL . 'Table '. $i . ' have capacity ' . $this->capacity[$i] . ' and it\'s ' . $this->status[$i];
         }
-        echo "\n";
+        echo PHP_EOL;
+    }
+
+    public function setStatus(int $id, string $status) : void {
+        $this->status[$id] = $status;
     }
 }

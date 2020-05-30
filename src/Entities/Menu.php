@@ -32,6 +32,6 @@ class Menu extends Entity
         for ($i = 0; $i < $this->count; $i++) {
             echo PHP_EOL . $this->name[$i] . ' cost ' . $this->price[$i];
         }
-        echo "\n";
+        echo PHP_EOL;
     }
 }
