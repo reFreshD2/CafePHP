@@ -34,4 +34,12 @@ class Table extends Entity {
     public function setStatus(int $id, string $status) : void {
         $this->status[$id] = $status;
     }
+
+    public function getTable() : array {
+        return $this->capacity;
+    }
+
+    public function getStatus(int $id) {
+        return $this->status[$id];
+    }
 }

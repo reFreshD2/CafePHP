@@ -34,4 +34,16 @@ class Menu extends Entity
         }
         echo PHP_EOL;
     }
+
+    public function getPrice(string $menu) : int {
+        $i = 0;
+        while ($this->name[$i] != $menu && $i<=$this->count) {
+            $i++;
+        }
+        return $this->price[$i];
+    }
+
+    public function getName() : array {
+        return $this->name;
+    }
 }

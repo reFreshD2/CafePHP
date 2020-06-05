@@ -38,4 +38,20 @@ class Order extends Entity {
     public function getStatus() : array {
         return $this->status;
     }
+
+    public function getMenu(int $table) : array {
+        return $this->order[$table]["menu"];
+    }
+
+    public function getCount(int $table) : array {
+        return $this->order[$table]["count"];
+    }
+
+    public function setStatus(int $order, string $status) : void {
+        $this->status[$order] = $status;
+    }
+
+    public function getOrder() : array {
+        return $this->order;
+    }
 }
