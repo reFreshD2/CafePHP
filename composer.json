@@ -1,0 +1,19 @@
+{
+    "name": "root/rest",
+    "type": "project",
+    "authors": [
+        {
+            "name": "reFresh",
+            "email": "refreshd2@mail.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MyRest\\": "src/"
+        }
+    },
+    "require": {
+        "monolog/monolog": "^2.1",
+        "twig/twig": "^3.0"
+    }
+}

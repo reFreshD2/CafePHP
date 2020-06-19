@@ -1,0 +1,9 @@
+{% extends 'index.twig' %}
+
+{% block content %}
+    <form action="{{ script }}" method="post">
+        Название:  <input type="text" name="name"><br>
+        Стоимость: <input type="text" name="price"><br>
+        <input type="submit" name="submit" value="Добавить">
+    </form>
+{% endblock %}
